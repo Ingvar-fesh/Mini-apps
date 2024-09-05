@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F00B02D62C89678F007EF1DA /* TicTacToeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B02D52C89678F007EF1DA /* TicTacToeModel.swift */; };
+		F00B02D82C896985007EF1DA /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B02D72C896985007EF1DA /* WeatherModel.swift */; };
 		F0D52B982C880410006192AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D52B972C880410006192AC /* AppDelegate.swift */; };
 		F0D52B9A2C880410006192AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D52B992C880410006192AC /* SceneDelegate.swift */; };
 		F0D52B9C2C880410006192AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D52B9B2C880410006192AC /* ViewController.swift */; };
 		F0D52BA12C880414006192AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0D52BA02C880414006192AC /* Assets.xcassets */; };
 		F0D52BA42C880414006192AC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F0D52BA32C880414006192AC /* Base */; };
 		F0D52BAC2C880E75006192AC /* GameListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D52BAB2C880E75006192AC /* GameListCell.swift */; };
+		F0D52BAF2C881708006192AC /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D52BAE2C881708006192AC /* TicTacToeViewController.swift */; };
+		F0D52BB22C882698006192AC /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D52BB12C882698006192AC /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F00B02D52C89678F007EF1DA /* TicTacToeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeModel.swift; sourceTree = "<group>"; };
+		F00B02D72C896985007EF1DA /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		F0D52B942C880410006192AC /* Mini-apps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini-apps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0D52B972C880410006192AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0D52B992C880410006192AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,8 @@
 		F0D52BA32C880414006192AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0D52BA52C880414006192AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0D52BAB2C880E75006192AC /* GameListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListCell.swift; sourceTree = "<group>"; };
+		F0D52BAE2C881708006192AC /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
+		F0D52BB12C882698006192AC /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,35 @@
 		F0D52B962C880410006192AC /* Mini-apps */ = {
 			isa = PBXGroup;
 			children = (
+				F0D52BB02C882681006192AC /* Weather */,
+				F0D52BAD2C8816F3006192AC /* TicTacToe */,
 				F0D52B972C880410006192AC /* AppDelegate.swift */,
 				F0D52B992C880410006192AC /* SceneDelegate.swift */,
 				F0D52B9B2C880410006192AC /* ViewController.swift */,
+				F0D52BAB2C880E75006192AC /* GameListCell.swift */,
 				F0D52BA02C880414006192AC /* Assets.xcassets */,
 				F0D52BA22C880414006192AC /* LaunchScreen.storyboard */,
 				F0D52BA52C880414006192AC /* Info.plist */,
-				F0D52BAB2C880E75006192AC /* GameListCell.swift */,
 			);
 			path = "Mini-apps";
+			sourceTree = "<group>";
+		};
+		F0D52BAD2C8816F3006192AC /* TicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				F0D52BAE2C881708006192AC /* TicTacToeViewController.swift */,
+				F00B02D52C89678F007EF1DA /* TicTacToeModel.swift */,
+			);
+			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		F0D52BB02C882681006192AC /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				F0D52BB12C882698006192AC /* WeatherViewController.swift */,
+				F00B02D72C896985007EF1DA /* WeatherModel.swift */,
+			);
+			path = Weather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +166,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0D52B9C2C880410006192AC /* ViewController.swift in Sources */,
+				F0D52BB22C882698006192AC /* WeatherViewController.swift in Sources */,
 				F0D52B982C880410006192AC /* AppDelegate.swift in Sources */,
+				F0D52BAF2C881708006192AC /* TicTacToeViewController.swift in Sources */,
+				F00B02D62C89678F007EF1DA /* TicTacToeModel.swift in Sources */,
 				F0D52B9A2C880410006192AC /* SceneDelegate.swift in Sources */,
+				F00B02D82C896985007EF1DA /* WeatherModel.swift in Sources */,
 				F0D52BAC2C880E75006192AC /* GameListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +319,7 @@
 				DEVELOPMENT_TEAM = FD3TPFL77C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini-apps/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Мы используем вашу геопозицию для получения данных о погоде.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -319,6 +352,7 @@
 				DEVELOPMENT_TEAM = FD3TPFL77C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini-apps/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Мы используем вашу геопозицию для получения данных о погоде.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

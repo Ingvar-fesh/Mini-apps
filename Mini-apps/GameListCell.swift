@@ -1,7 +1,7 @@
 import UIKit
 
 final class GameListCell: UITableViewCell {
-    private let gameImageView = UIImageView()
+    private let appImageView = UIImageView()
     private let overlayView = UIView()
     private let titleLabel = UILabel()
     
@@ -19,10 +19,10 @@ final class GameListCell: UITableViewCell {
     }
 
     private func setupImageView() {
-        gameImageView.contentMode = .scaleAspectFill
-        gameImageView.clipsToBounds = true
-        gameImageView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(gameImageView)
+        appImageView.contentMode = .scaleAspectFill
+        appImageView.clipsToBounds = true
+        appImageView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(appImageView)
     }
 
     private func setupOverlayView() {
@@ -41,10 +41,10 @@ final class GameListCell: UITableViewCell {
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            gameImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            gameImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            gameImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            gameImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            appImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            appImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            appImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            appImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
             overlayView.topAnchor.constraint(equalTo: contentView.topAnchor),
             overlayView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
@@ -56,12 +56,12 @@ final class GameListCell: UITableViewCell {
         ])
     }
 
-    func configure(with game: Game) {
-        titleLabel.text = game.title
-        if let coverImage = game.coverImage {
-            gameImageView.image = coverImage
+    func configure(with app: App) {
+        titleLabel.text = app.title
+        if let coverImage = app.coverImage {
+            appImageView.image = coverImage
         } else {
-            gameImageView.image = UIImage(named: "placeholder")
+            appImageView.image = UIImage(named: "placeholder")
         }
     }
 }
