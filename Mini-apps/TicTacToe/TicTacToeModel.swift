@@ -6,7 +6,7 @@ protocol TicTacToeModelDelegate: AnyObject {
 
 final class TicTacToeModel {
     private(set) var currentPlayer: Player = .playerX
-    private(set) var boardState: [Player?] = Array(repeating: nil, count: 9)
+    private var boardState: [Player?] = Array(repeating: nil, count: 9)
     
     weak var delegate: TicTacToeModelDelegate?
     

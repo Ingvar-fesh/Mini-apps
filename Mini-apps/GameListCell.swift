@@ -1,6 +1,6 @@
 import UIKit
 
-final class GameListCell: UITableViewCell {
+final class AppListCell: UITableViewCell {
     private let appImageView = UIImageView()
     private let overlayView = UIView()
     private let titleLabel = UILabel()

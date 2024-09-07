@@ -16,6 +16,7 @@ final class TicTacToeViewController: UIViewController, TicTacToeModelDelegate {
         setUpBoard()
     }
     
+    
     func setUpBoard() {
         let gridSize = 3
         let buttonSize: CGFloat = view.bounds.width / CGFloat(gridSize)

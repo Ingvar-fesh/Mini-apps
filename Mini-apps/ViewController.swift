@@ -7,7 +7,7 @@ struct App {
 
 class ViewController: UIViewController {
     
-    let games: [App] = [
+    private let games: [App] = [
         App(title: "Крестики-нолики", coverImage: UIImage(named: "TicTacToe")),
         App(title: "Погода", coverImage: UIImage(named: "Weather")),
         App(title: "В разработке", coverImage: nil),
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         list.dataSource = self
         list.delegate = self
         list.rowHeight = view.bounds.height / 8
-        list.register(GameListCell.self, forCellReuseIdentifier: "GameCell")
+        list.register(AppListCell.self, forCellReuseIdentifier: "AppCell")
         list.translatesAutoresizingMaskIntoConstraints = false
         return list
     }()
@@ -60,7 +60,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = gameList.dequeueReusableCell(withIdentifier: "GameCell", for: indexPath) as! GameListCell
+        let cell = gameList.dequeueReusableCell(withIdentifier: "AppCell", for: indexPath) as! AppListCell
         let game = games[indexPath.row]
         cell.configure(with: game)
         return cell

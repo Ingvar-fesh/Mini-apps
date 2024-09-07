@@ -2,8 +2,8 @@ import UIKit
 import CoreLocation
 
 final class WeatherViewController: UIViewController, WeatherModelDelegate {
-    let locationManager = CLLocationManager()
-    let weatherModel = WeatherModel()
+    private let locationManager = CLLocationManager()
+    private let weatherModel = WeatherModel()
     
     private let temperatureLabel: UILabel = {
         let label = UILabel()
