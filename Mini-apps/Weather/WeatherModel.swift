@@ -15,7 +15,7 @@ final class WeatherModel {
     weak var delegate: WeatherModelDelegate?
     
     func fetchWeather(for coordinate: CLLocationCoordinate2D) {
-        let apiKey = "58972f94d5eb70fa56d007991912345b"
+        let apiKey = "" //apiToken from OpenWeatherMap
         let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&appid=\(apiKey)&units=metric&lang=ru"
         
         guard let url = URL(string: urlString) else { return }
